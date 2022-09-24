@@ -1,6 +1,10 @@
 body {
-  background-color: #5E5768;
+  background-color: #3A445D;
+}
+
+.pageContainer {
   display: flex;
+  flex-direction: column;
 }
 
 .calculatorContainer {
@@ -12,20 +16,58 @@ body {
   height: 25rem;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 1rem;
 }
 
 .calculatorScreen {
   display: flex;
-  width: 18rem;
+  width: 17rem;
   height: 10rem;
-  background-color: #E9C46A;
+  background-color: #FDE9B4;
   margin: 1rem 0 0 0;
 }
 
 .calculatorKeys {
   display: flex;
-  margin: 1rem;
-  background-color: #3A445D;
+  margin: 1rem 3rem 2rem;
+  background-color: #F4A261;
   width: 18rem;
   height: 14rem;
 }
+
+button {
+  background-color: #E76F51;
+  width: 3.5rem;
+  height: 3rem;
+  border-color:#3A445D;
+  font-size: 1.3rem;
+}
+
+.buttonBig {
+  width: 8.8rem;
+  }
+
+.opButton {
+    width: 4.4rem;
+  }
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.operations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigButtons {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
