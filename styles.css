@@ -1,73 +1,69 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: normal;
+}
+
 body {
-  background-color: #3A445D;
+  padding: 0;
+  margin: 0;
+  background: #dad9d3;
 }
 
-.pageContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.calculatorContainer {
-  display: flex;
-  margin: 10rem auto;
+.calculator-grid {
+  display: grid;
   justify-content: center;
-  background-color: #F4A261;
-  width: 20rem;
-  height: 25rem;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 1rem;
-}
-
-.calculatorScreen {
-  display: flex;
-  width: 17rem;
-  height: 10rem;
-  background-color: #FDE9B4;
-  margin: 1rem 0 0 0;
-}
-
-.calculatorKeys {
-  display: flex;
-  margin: 1rem 3rem 2rem;
-  background-color: #F4A261;
-  width: 18rem;
-  height: 14rem;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
 button {
-  background-color: #E76F51;
-  width: 3.5rem;
-  height: 3rem;
-  border-color:#3A445D;
-  font-size: 1.3rem;
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid rgb(0, 0, 0);
+  outline: none;
+  background-color: #dbdbdb9f;
 }
 
-.buttonBig {
-  width: 8.8rem;
-  }
+.calculator-grid > button:hover {
+  background-color: #ffffff;
+}
 
-.opButton {
-    width: 4.4rem;
-  }
+.span-two {
+  grid-column: span 2;
+  background-color: #baa1d1;
+}
 
-.numbers {
+.output {
+  grid-column: 1 / -1;
+  background-color: rgb(0, 0, 0, 0.6);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-.operations {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.output .previous-operand {
+  color: rgba(233, 233, 233, 0.6);
+  font-size: 1.5rem;
 }
 
-.bigButtons {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+.output .current-operand {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
 }
 
+.operation {
+  background-color: #d1c8a9;
+}
 
+.del {
+  background-color: #da9491;
+}
